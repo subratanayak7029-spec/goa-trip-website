@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anupama College Goa Trip</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f8ff;
+            text-align: center;
+        }
+        h1 {
+            color: darkblue;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+        input, select {
+            width: 90%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+        button {
+            background: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Anupama College of Management and Science</h1>
+    <h2>Goa Trip Registration Form</h2>
+
+    <form onsubmit="showMessage(event)">
+        <input type="text" placeholder="Enter Name" required><br>
+        <input type="text" placeholder="Enter Address" required><br>
+        <input type="tel" placeholder="Enter Phone Number" required><br>
+
+        <select required>
+            <option value="">Select Course</option>
+            <option>BCA</option>
+            <option>B.Com</option>
+            <option>Nursing</option>
+            <option>Pharmacy</option>
+        </select><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="msg" style="color: green; font-weight: bold;"></p>
+
+    <script>
+        function showMessage(event) {
+            event.preventDefault();
+            document.getElementById("msg").innerText = "Form submitted successfully!";
+        }
+    </script>
+
+</body>
+</html>
